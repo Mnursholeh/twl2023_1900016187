@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../src/asset/icon/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link type="text/css" href="../node_modules/cropperjs/dist/cropper.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+    <title>cropper-image</title>
+</head>
+
+<body>
+
+    <!-- container -->
+    <div id="container" class=" container-fluid p-0">
+
+        <!-- navbar  -->
+        <nav class="nav">
+            <div class="container-fluid d-flex justify-content-between">
+                <span class="navbar-brand">Cropper image</span>
+        </nav>
+        <!-- navbar end -->
+
+        <!-- work area -->
+        <div class="work-container d-flex justify-content-around ">
+
+
+            <!-- drag and drop -->
+            <div class="drag-area">
+                <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                <header>Drag & Drop to Upload Image</header>
+                <span>OR</span>
+                <label for="input">Upload image</label>
+                <input name="input" type="file" hidden>
+            </div>
+            <!-- drag and drop ends -->
+
+
+            <div class="crop-image-container">
+                <img id="image" src="" width="100%">
+            </div>
+
+
+            <!-- detail container  -->
+            <div class="crop-detail-container">
+                <h1>Crop Details</h1>
+                <div class="image-preview">
+                    <div class="preview">
+
+                    </div>
+                </div>
+
+                <div class="crop-data">
+
+                    <div>
+                        <p>X-index :</p>
+                        <input class="x" value=""></input>
+                        <label for="x">px</label>
+                    </div>
+                    <div>
+                        <p>Y-index :</p>
+                        <input class="y" value=""></input>
+                        <label for="y">px</label>
+                    </div>
+                    <div>
+                        <p>Height :</p>
+                        <input class="h" value=""></input>
+                        <label for="h">px</label>
+                    </div>
+                    <div>
+                        <p>Width :</p>
+                        <input class="w" value=""></input>
+                        <label for="w">px</label>
+                    </div>
+
+
+                </div>
+
+                <div class="crop-button-container d-flex flex-column align">
+                    <label for="crop-button" id="crop-button" data-bs-toggle="modal"
+                        data-bs-target="#croppedModal">Crop</label>
+                    <button name="crop-button" class="crop-button" type="submit" hidden></button>
+
+                    <label for="crop-reset" class="crop-reset">Reset</label>
+                    <button name="crop-reset" type="reset" hidden></button>
+                </div>
+                <!-- detail container end -->
+
+            </div>
+            <!-- work area end -->
+
+            <!-- popup modal -->
+            <!-- Modal -->
+            <div class="modal fade" id="croppedModal" tabindex="-1" aria-labelledby="croppedModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="croppedModalLabel">Cropped</h5>
+                        </div>
+                        <div class="modal-body">
+                            <img src="" id="cropped-modal" width="100%">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <a id="download" class="btn save-btn" download="testing">Download</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- popup modal end -->
+        </div>
+    </div>
+    <!-- container end -->
+
+
+
+    <!-- script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+    <script type="module" src="../src/script.js"></script>
+
+</body>
+
+</html>

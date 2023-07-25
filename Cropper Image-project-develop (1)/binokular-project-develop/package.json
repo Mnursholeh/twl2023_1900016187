@@ -1,0 +1,15 @@
+{
+  "name": "Cropper image",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nur Sholeh",
+  "license": "ISC",
+  "dependencies": {
+    "base-64": "^1.0.0",
+    "cropperjs": "^1.5.12"
+  }
+}

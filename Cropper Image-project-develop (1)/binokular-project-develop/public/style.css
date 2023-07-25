@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+body {
+  position: fixed;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+div#container {
+  height: inherit;
+}
+
+/* navbar /////////////////////////////*/
+
+nav {
+  height: 60px;
+  background-color: #232121;
+  color: #fff;
+  line-height: 60px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: fixed;
+  left: 0;
+  right: 0;
+}
+
+nav div.container-fluid {
+  padding-right: 100px;
+  padding-left: 100px;
+}
+
+nav span {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.upload-button {
+  height: 60px;
+  width: 70px;
+}
+
+.upload-button img:hover {
+  width: 42px;
+  height: 32px;
+}
+
+.upload-button img {
+  margin-left: 15px;
+  cursor: pointer;
+}
+/* //////////////////////// */
+
+/* drag end drop//////////////////////////// */
+.drag-area {
+  bottom: 100px;
+  left: 100px;
+  position: absolute;
+  border: 3px dashed rgb(123, 121, 121);
+  height: 600px;
+  width: 55%;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.drag-area.active {
+  border: 2px solid #fff;
+  display: none;
+}
+.drag-area .icon {
+  font-size: 100px;
+  color: rgb(123, 121, 121);
+}
+.drag-area header {
+  font-size: 30px;
+  font-weight: 500;
+  color: rgb(123, 121, 121);
+}
+.drag-area span {
+  font-size: 25px;
+  font-weight: 500;
+  color: rgb(123, 121, 121);
+  margin: 10px 0 15px 0;
+}
+.drag-area label {
+  padding: 10px 25px;
+  font-size: 20px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  background: rgba(0, 255, 0, 0.874);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.drag-area label:active {
+  background-color: rgb(57, 57, 57);
+}
+
+.drag-area img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* //////////////////////////// */
+
+/* work area ///////////////////////// */
+
+.work-container {
+  width: 100vw;
+  height: inherit;
+  background-color: #484646;
+}
+
+.crop-image-container {
+  width: 800px;
+  height: 100%;
+  margin-left: 50px;
+  margin-top: 80px;
+  padding-bottom: 100px;
+  overflow: scroll;
+  scrollbar-width: none;
+}
+
+/* detail area /////////////////// */
+
+.crop-detail-container {
+  width: 350px;
+  height: 700px;
+  margin-top: 120px;
+  background-color: #656363;
+  border: 2px solid #e5e5e5;
+  border-radius: 15px;
+}
+
+.crop-detail-container h1 {
+  font-size: 22px;
+  margin-top: 10px;
+  text-align: center;
+  color: rgb(10, 255, 6);
+}
+
+.image-preview {
+  height: 200px;
+  width: 80%;
+  margin: auto;
+}
+
+.preview {
+  display: block;
+  height: 200px;
+  margin: auto;
+  border: 1px solid whitesmoke;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.preview:hover {
+  transform: scale(2);
+}
+
+.crop-data {
+  width: 80%;
+  padding-top: 20px;
+  margin: auto;
+}
+
+.crop-data div {
+  display: flex;
+  width: 100%;
+  margin-top: 30px;
+  color: whitesmoke;
+  justify-content: start;
+}
+
+.crop-data p {
+  text-align: center;
+  width: 100px;
+  box-sizing: border-box;
+}
+.crop-data input {
+  all: unset;
+  text-align: center;
+  width: 100px;
+  box-sizing: border-box;
+}
+
+.crop-button-container label {
+  width: 80%;
+  height: 20;
+  padding: 10px 20px;
+  margin: auto;
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  color: white;
+  border: 1px solid white;
+  border-radius: 15px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+label#crop-button {
+  margin-top: 20px;
+  background-color: rgb(183, 183, 183);
+}
+
+label#crop-button:hover {
+  background-color: rgb(23, 255, 54);
+  cursor: pointer;
+}
+
+label.crop-reset:hover {
+  background-color: rgb(23, 255, 54);
+  cursor: pointer;
+}
+/* detail area end//////////////////// */
+
+/* cropped modal /////////////////////// */
+
+.modal-body {
+  background-color: #232121;
+}
+.modal-header {
+  color: white;
+  background-color: #484646;
+}
+
+.modal-footer {
+  color: white;
+  background-color: #484646;
+}
+
+.save-btn {
+  color: white;
+  background-color: rgb(35, 201, 57);
+}
+.save-btn:hover {
+  color: white;
+  background-color: rgb(23, 255, 54);
+}
+
+.save-btn:active {
+  color: white;
+  background-color: rgb(35, 201, 57);
+}
+
+/* cropped modal end */
+
+/* ////////////////////// */
+
+/* Ensure the size of the image fit the container perfectly */
+#uploadedImage {
+  display: block;
+
+  /* This rule is very important, please don't ignore this */
+  max-width: 100%;
+}
